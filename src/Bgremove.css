@@ -1,0 +1,42 @@
+.bg_div_cont{
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 110px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px black;
+    background-color: #222A34;
+}
+.bg_div_header_title{
+    font-size: 30px;
+    color: white;
+    text-align: right;
+    padding-right: 25px;
+    padding-top: 15px
+}
+.bg_div_header_button{
+    border-radius: 25px;
+    width: 100px;
+    border: 0;
+    background-color: #475366;
+    color: white;
+    height: 26px;
+    float: left;
+    margin-left: 25px;
+    background-image: url('./assets/Upload.png');
+    background-repeat: no-repeat;
+    text-align: right;
+    background-position: 4px 6px;
+}
+.bg_div_header_subtext{
+    color: white;
+    text-align: left;
+    padding-left: 140px;
+    width: 318px;
+}
+.close_img{
+    position: absolute;
+    left: 12px;
+    top: 10px;
+}
