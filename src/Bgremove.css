@@ -1,6 +1,13 @@
+@font-face {
+    font-family: "Adumna";
+    src: url('./assets/fonts/Aduma\ Regular.ttf'),
+  }
+body{
+    font-family: 'Aduma';
+}
 .bg_div_cont{
     width: 800px;
-    height: 500px;
+    height: 600px;
     border: 1px solid black;
     margin: 0 auto;
     margin-top: 110px;
@@ -40,3 +47,97 @@
     left: 12px;
     top: 10px;
 }
+.main_cont{
+    clear: both;
+}
+.main_cont_left{
+    width: 68%;
+    float: left;
+    height: 445px;
+    margin-left: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #2F3A4B;
+    
+    
+ 
+    
+
+
+}
+.main_cont_right{
+    width: 29%;
+    float: right;
+    height: 445px;
+    margin-right: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #2F3A4B;
+
+}
+.middle_div_left, .middle_div_right{
+    height: 355px;
+    margin-top: 45px;
+    background-color: #161B21;
+
+}
+
+.footer_cont{
+
+}
+.logo{
+    float: left;
+    margin:22px;
+    margin-left: 40px;
+
+}
+.banner{
+    float: right;
+    margin:18px;
+}
+.tab_button_no_bg, .tab_button_original{
+    color: white;
+    width: 92px;
+    float: right;
+    position: relative;
+    top: -33px;
+    right: 1px;
+
+}
+.tab_button_no_bg{
+    background-image: url('./assets/Cleanup Edges.png');
+    background-repeat: no-repeat;
+    background-position: 75px 4px;
+    border-bottom: 3px solid #9C27B0;
+    padding-bottom: 12px
+}
+.tab_button_original{
+    background-image: url('./assets/Image.png');
+    background-repeat: no-repeat;
+    background-position: 67px 4px;
+    padding-bottom: 12px;
+}
+.main_cont_left_footer_text {
+    color: white;
+    font-size: 15px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px;
+}
+.company_policy_btm{
+    float: left;
+    margin-top: -32px;
+    margin-left: 22px;
+    
+    border-radius: 25px;
+    width: 100px;
+    border: 0;
+    background-color: #475366;
+    color: white;
+    height: 26px;
+    background-image: url('./assets/eula.png');
+    background-repeat: no-repeat;
+    text-align: right;
+    background-position: 5px 6px;
+}
+
