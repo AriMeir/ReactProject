@@ -30,7 +30,8 @@ function Bgremove() {
                   </div>
                   <div className='main_cont_right'>
                     <div className='middle_div_right'>
-                      <DownloadImg/>
+                      <DownloadImg title = "תמונה חינם" subtitle = " תצוגה מקדימה של תמונה 612x418" btntext = "הורד" subtext="משהו"/>
+                      <DownloadImg title = "תמונה חינם" subtitle = " תצוגה מקדימה של תמונה 612x418" btntext = "הורד" subtext="משהו"/>
                       
                     </div>
                   </div>

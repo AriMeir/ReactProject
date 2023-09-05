@@ -1,10 +1,13 @@
 import './DownloadImg.css';
 
 
-function DownloadImg() {
+function DownloadImg(props) {
   return (
     <div className="DownloadImg">
-     הי
+      <div> {props.title}</div>
+      <div> {props.subtitle}</div>
+      <button>{props.btntext}</button>
+      <div> {props.subtext}</div>
     </div>
   );
 }
