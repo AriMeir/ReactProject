@@ -1,0 +1,18 @@
+.DownloadImg_cont{
+    height: 40%;
+    padding-top: 33px;
+    padding-right:10px
+}
+.DownloadImg_title{
+    color:white;
+    text-align: right;
+    font-size: 25px;
+}
+.DownloadImg_subtitle{
+    color:white;
+    text-align: right;
+}
+.DownloadImg_subtext{
+    color:white;
+    text-align: right;
+}
