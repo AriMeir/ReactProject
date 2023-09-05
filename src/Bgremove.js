@@ -3,8 +3,16 @@ import logo from './assets/logo.png'
 import banner from './assets/banner.png'
 import './Bgremove.css';
 import DownloadImg from './DownloadImg';
+import { useState } from "react";
 
 function Bgremove() {
+  const [tabname, settabname] = useState('no_bg');
+  function tab_click() {
+    settabname('original');
+    
+  }
+  
+
   return (
     <div>
         <div className='bg_div_cont'>
@@ -18,8 +26,8 @@ function Bgremove() {
                 <div className='main_cont'>
                   <div className='main_cont_left'>
                     <div className='middle_div_left'>
-                      <div className='tab_button_no_bg'>הוסר רקע</div>
-                      <div className='tab_button_original'>מקורי</div>
+                      <div className="tab_button_no_bg" onClick={tab_click}>הוסר רקע</div>
+                      <div className="tab_button_original">מקורי</div>
                     </div>
                     <div className='main_cont_left_footer'>
                     <div className='main_cont_left_footer_text'>ע"י העלאת תמונה הנך מסכים לתנאים וההגבלות של החברה.</div>
