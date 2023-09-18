@@ -4,7 +4,16 @@ import { useState, useRef , useEffect} from "react";
 
 function Image(props) {
   const [color, settcolor] = useState('transperent');
+  const [image_only_disp, setimage_only_disp] = useState('');
   const inputElement = useRef();
+  
+  useEffect(() => {
+    if(props.image_only==false) {
+        setimage_only_disp('image_only_disp');
+    } else {
+        setimage_only_disp('');
+    }
+},[props.image_only]);
   const focusInput = () => {
     inputElement.current.click();
   };
@@ -26,8 +35,7 @@ function Image(props) {
         <input type='color'  ref={inputElement} className='input_color' onChange={color_change}></input>
         </>
         : ""}
-        <div className='image_pace'>
-
+        <div className={`image_pace ${image_only_disp}`} >
         </div>
       </div>
     </div>

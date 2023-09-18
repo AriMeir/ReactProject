@@ -47,3 +47,9 @@
     border: solid 1px white;
     height: 294px;
 }
+.image_only_disp{
+    top: 25px;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+}
