@@ -1,0 +1,49 @@
+.image_disp_cont_text{
+    color: #00bcd491;
+    text-align: right;
+    width: 100%;
+    float: right;
+    margin-top: -19px;
+    padding-right: 25px;
+    font-size: 13px;
+    background-image: url('./assets/warning.png');
+    background-repeat: no-repeat;
+    background-position: 550px 2px
+}
+.color_btn{
+    border: solid 1px white;
+    color: #ffffff91;
+    border-radius: 25px;
+    width: 80px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    text-align: right;
+    font-size: 14px;
+    padding-right: 10px;
+    line-height: 25px;
+}
+.input_color{
+    position: relative;
+    top: -13px;
+    left: -227px;
+    opacity: 0;
+}
+.color_choose{
+    color: #ffffff91;
+    width: 24px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: right;
+    padding-right: 11px;
+    line-height: 26px;
+  
+    height: 26px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+}
+.image_pace{
+    border: solid 1px white;
+    height: 294px;
+}
