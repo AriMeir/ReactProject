@@ -6,10 +6,16 @@ import DownloadImg from './DownloadImg';
 import { useState } from "react";
 
 function Bgremove() {
-  const [tabname, settabname] = useState('no_bg');
-  function tab_click() {
-    settabname('original');
-    
+  const [tabname, settabname] = useState('original');
+  function tab_click(e) {
+    if(e.target.className == "tab_button_original"){
+      settabname('original');
+    }
+    else{
+      settabname('no_bg')
+    }
+
+        
   }
   
 
@@ -26,8 +32,8 @@ function Bgremove() {
                 <div className='main_cont'>
                   <div className='main_cont_left'>
                     <div className='middle_div_left'>
-                      <div className="tab_button_no_bg" onClick={tab_click}>הוסר רקע</div>
-                      <div className="tab_button_original">מקורי</div>
+                        <div className="tab_button_no_bg" style={{borderBottom: (tabname=="no_bg" ? "3px solid #9C27B0": "")}} onClick={tab_click}> הוסר רקע </div>
+                        <div className="tab_button_original"  style={{borderBottom: (tabname=="original" ? "3px solid #9C27B0": "")}} onClick={tab_click}> מקורי </div>
                     </div>
                     <div className='main_cont_left_footer'>
                     <div className='main_cont_left_footer_text'>ע"י העלאת תמונה הנך מסכים לתנאים וההגבלות של החברה.</div>
