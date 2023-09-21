@@ -8,6 +8,7 @@ import Image from './Image';
 import DownloadFolder from './assets/Downloads Folder.png'
 import NotRobot from './assets/not_robot.png'
 import close1 from './assets/close1.png'
+import axios from 'axios';
 
 function Bgremove() {
   //for the file
@@ -49,7 +50,33 @@ function Bgremove() {
     setopen_popup_download(false)
   }
 
+//---------------------------------------
+//---------------- send pic to server ----------------------
+const [show_error, set_show_error] = useState(false);
+function send_to_server(e){
+  set_show_error(false)
+  
+  console.log(e.target.files)
+  let file = e.target.files[0];
+  if(file.type == "image/png" || file.type == "image/jpeg"){
+    let formData = new FormData();
+    formData.append("file", file);
+    let headers = {
+      "Content-Type": "multipart/form-data"
+    }
 
+    axios.post('http://localhost:5000/upload_img', formData, headers)
+    .then(res => {
+    console.log(res);
+    
+  })
+}
+else{
+  set_show_error(true)
+
+}
+  
+}
   
 
   return (
@@ -60,8 +87,9 @@ function Bgremove() {
                 <image src = {close} className='close_img'/>
                 <div className='bg_div_header_title'>העלאת תמונה כדי להסיר את הרקע</div>
                     <button className='bg_div_header_button' onClick={focusInput}>העלאת תמונה</button>
-                    <input type='file'  ref={inputFileElement} className='file_input'></input>
+                    <input type='file'  ref={inputFileElement} className='file_input' onChange={send_to_server}></input>
                     <div className='bg_div_header_subtext'> pnj,jpeg - פורמטים נתמכים   </div>
+                    {show_error? <div className='error'>קובץ לא נתמך</div> : ""}
                 </div>
                 <div className='main_cont'>
                   <div className='main_cont_left'>

@@ -266,4 +266,9 @@ body{
     top: 12px;
     cursor:pointer
 }
+.error{
+    color:red;
+    position: absolute;
+    left: 328px;
+}
 
