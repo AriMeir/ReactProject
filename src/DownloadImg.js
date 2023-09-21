@@ -1,11 +1,13 @@
 import './DownloadImg.css';
 import newImg from './assets/new.png';
 
-function open_download_popup(){
 
-}
 
 function DownloadImg(props) {
+  function open_download_popup(){
+    props.show_popup();
+  
+  }
   return (
     <div className="DownloadImg_cont" style={{borderBottom: (props.borderFlag? "1px solid #ffffff85" : "")}}>
       <div className='title_container'>

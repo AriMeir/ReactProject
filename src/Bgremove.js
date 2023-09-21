@@ -5,6 +5,9 @@ import './Bgremove.css';
 import DownloadImg from './DownloadImg';
 import { useState, useRef } from "react";
 import Image from './Image';
+import DownloadFolder from './assets/Downloads Folder.png'
+import NotRobot from './assets/not_robot.png'
+import close1 from './assets/close1.png'
 
 function Bgremove() {
   //for the file
@@ -12,6 +15,7 @@ function Bgremove() {
   const focusInput = () => {
     inputFileElement.current.click();
   };
+  //   ----- open popup ----
   const [open_poup, setopen_poup] = useState(false);
 
   function open_popup(){
@@ -21,8 +25,9 @@ function Bgremove() {
   function close_popup(){
     setopen_poup(false);
   }
+  // --------------------------
 
-
+  // ----- tabs ----------
   const [tabname, settabname] = useState('original');
   
 
@@ -36,6 +41,15 @@ function Bgremove() {
 
         
   }
+  // -----------inside popup------------
+  const [open_popup_download, setopen_popup_download] = useState(false);
+  function show_popup_func() {
+    setopen_popup_download(true)
+  }function close_popup_func() {
+    setopen_popup_download(false)
+  }
+
+
   
 
   return (
@@ -74,7 +88,8 @@ function Bgremove() {
                   </div>
                   <div className='main_cont_right'>
                     <div className='middle_div_right'>
-                      <DownloadImg title = "תמונה חינם" subtitle = " תצוגה מקדימה של תמונה 612x418" btntext = "הורד" subtext="האיכות הטובה עד 0.25 מגה פיקסל" borderFlag = {true} titleImg = {false}/>
+                      <DownloadImg title = "תמונה חינם" subtitle = " תצוגה מקדימה של תמונה 612x418" btntext = "הורד" subtext="האיכות הטובה עד 0.25 מגה פיקסל" borderFlag = {true} titleImg = {false}
+                      show_popup = {show_popup_func}/>
                       <DownloadImg title = "Pro" subtitle = "תמונה מלאה 1280x1920" btntext = "HD הורד" subtext="האיכות הטובה ביותר עד 0.25 מגה פיקסל"  borderFlag = {false} titleImg = {true}/>
                       
                     </div>
@@ -104,22 +119,26 @@ function Bgremove() {
           </>
           : ""}
         
-        
-      <div className='download_popup'>
+{open_popup_download? <div className='download_popup'>
+        <img src={close1} className='close1_img' onClick={close_popup_func}/>
       <div className='top_img'>
-
+          <img src={DownloadFolder} className='download_folder_img' />
       </div>
       <div className='download_popup_title' >אישור להורדת תמונה</div>
       <div className='download_popup_subtitle'>האם להוריד את התמונה?</div>
       <div className='not_robot_cont'>
-      <input type='checkbox' className='download_popup_checkbox'/>
-      <span className='download_popup_not_robot'>אני לא רובוט</span>
+
+        <img src={NotRobot} className='not_robot_img'/>
+        <span className='download_popup_not_robot'>אני לא רובוט</span>
+        <input type='checkbox' className='download_popup_checkbox'/>
+      
       </div>
-      <button className='download_popup_cancel'>ביטול</button>
+      <button className='download_popup_cancel' onClick={close_popup_func}>ביטול</button>
       <button className='download_popup_approve'>אישור</button>
 
-      </div> 
-    </div>
+      </div> : "" }        
+      
+    </div> 
         
     
   );

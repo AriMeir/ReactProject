@@ -250,3 +250,20 @@ body{
     cursor: pointer;
 
 }
+.download_folder_img{
+    position: absolute;
+    top: 5px;
+    right: 8px;
+}
+.not_robot_img{
+    position: absolute;
+    top: 6px;
+    right: 95px;
+}
+.close1_img{
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    cursor:pointer
+}
+
