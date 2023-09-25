@@ -39,9 +39,15 @@ function Bgremove() {
     else{
       settabname('no_bg')
     }
-
+  
         
   }
+  // --------- uploaded img for tab ----------
+  const [upload_img_name, setupload_img_name] = useState(false);
+
+
+
+  //------------------------------------------
   // -----------inside popup------------
   const [open_popup_download, setopen_popup_download] = useState(false);
   function show_popup_func() {
@@ -53,30 +59,33 @@ function Bgremove() {
 //---------------------------------------
 //---------------- send pic to server ----------------------
 const [show_error, set_show_error] = useState(false);
-function send_to_server(e){
-  set_show_error(false)
-  
-  console.log(e.target.files)
+function send_to_server(e) {
+
   let file = e.target.files[0];
-  if(file.type == "image/png" || file.type == "image/jpeg"){
-    let formData = new FormData();
-    formData.append("file", file);
-    let headers = {
-      "Content-Type": "multipart/form-data"
-    }
 
-    axios.post('http://localhost:5000/upload_img', formData, headers)
-    .then(res => {
-    console.log(res);
-    
-  })
-}
-else{
-  set_show_error(true)
+   if(file.type=="image/png" || file.type=="image/jpeg") {
 
-}
+     
+     set_show_error(false);
+     
+     let formData = new FormData();
+
+     formData.append("UploadedFile", file);
+
+     let headers={
+       "Content-Type": "multipart/form-data"
+     }
+
+
+     axios.post('http://localhost:5000/upload_img', formData, headers)
+       .then(res => {
+          setupload_img_name(res.data)
+       })
+   } else {
+     set_show_error(true);
+   }
   
-}
+ }
   
 
   return (
@@ -97,9 +106,9 @@ else{
                         <div className="tab_button_no_bg" style={{borderBottom: (tabname=="no_bg" ? "3px solid #9C27B0": "")}} onClick={tab_click}> הוסר רקע </div>
                         <div className="tab_button_original"  style={{borderBottom: (tabname=="original" ? "3px solid #9C27B0": "")}} onClick={tab_click}> מקורי </div>
                         {tabname == "no_bg"?
-                        <Image image_only = {true}/>
+                        <Image image_only = {true} upload_img_name = {upload_img_name} />
                         :
-                        <Image image_only = {false}/>
+                        <Image image_only = {false} />
                         }             
 
                     </div>

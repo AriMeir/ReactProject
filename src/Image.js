@@ -36,6 +36,7 @@ function Image(props) {
         </>
         : ""}
         <div className={`image_pace ${image_only_disp}`} >
+        <img className="uploaded_img" src={'http://localhost:5000/'+ props.upload_img_name } />
         </div>
       </div>
     </div>

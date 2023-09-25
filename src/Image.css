@@ -46,6 +46,7 @@
 .image_pace{
     border: solid 1px white;
     height: 294px;
+    position: relative;
 }
 .image_only_disp{
     top: 25px;
