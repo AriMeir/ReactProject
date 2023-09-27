@@ -93,7 +93,7 @@ function send_to_server(e) {
         <div className='bg_div_cont'>
 
             <div className='bg_div_header'>
-                <image src = {close} className='close_img'/>
+                <img src = {close} className='close_img'/>
                 <div className='bg_div_header_title'>העלאת תמונה כדי להסיר את הרקע</div>
                     <button className='bg_div_header_button' onClick={focusInput}>העלאת תמונה</button>
                     <input type='file'  ref={inputFileElement} className='file_input' onChange={send_to_server}></input>
@@ -106,9 +106,9 @@ function send_to_server(e) {
                         <div className="tab_button_no_bg" style={{borderBottom: (tabname=="no_bg" ? "3px solid #9C27B0": "")}} onClick={tab_click}> הוסר רקע </div>
                         <div className="tab_button_original"  style={{borderBottom: (tabname=="original" ? "3px solid #9C27B0": "")}} onClick={tab_click}> מקורי </div>
                         {tabname == "no_bg"?
-                        <Image image_only = {true} upload_img_name = {upload_img_name} />
+                        <Image image_only = {true} upload_img_name = {"no_bg_"+upload_img_name}  />
                         :
-                        <Image image_only = {false} />
+                        <Image image_only = {false} upload_img_name = {upload_img_name} />
                         }             
 
                     </div>
