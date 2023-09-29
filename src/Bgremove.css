@@ -1,158 +1,157 @@
 @font-face {
-    font-family: "Adumna";
-    src: url('./assets/fonts/Aduma\ Regular.ttf'),
-  }
+    font-family: "Aduma";
+    src: url("./assets/fonts/Aduma\ Regular.ttf") ;
+}
+
 body{
     font-family: 'Aduma';
 }
+
 .bg_div_cont{
     width: 800px;
     height: 600px;
-    border: 1px solid black;
     margin: 0 auto;
     margin-top: 110px;
     border-radius: 20px;
     box-shadow: 1px 1px 10px black;
     background-color: #222A34;
 }
+
 .bg_div_header_title{
-    font-size: 30px;
     color: white;
+    font-size: 30px;
     text-align: right;
     padding-right: 25px;
-    padding-top: 15px
+    padding-top: 10px;
 }
+
 .bg_div_header_button{
-    border-radius: 25px;
-    width: 100px;
-    border: 0;
     background-color: #475366;
+    border: 0;
     color: white;
     height: 26px;
+    border-radius: 25px;
     float: left;
-    margin-left: 25px;
+    margin-left: 20px;
     background-image: url('./assets/Upload.png');
+    width: 120px;
     background-repeat: no-repeat;
-    text-align: right;
-    background-position: 4px 6px;
+    background-position: 5px 6px;
     cursor: pointer;
 }
+
 .bg_div_header_subtext{
     color: white;
     text-align: left;
-    padding-left: 140px;
+    padding-left: 160px;
     width: 318px;
 }
+
+.bg_div_header{
+    position: relative;
+}
+
 .close_img{
     position: absolute;
-    left: 12px;
-    top: 10px;
+    left: 16px;
+    top: 16px;
+
+
 }
-.main_cont{
-    clear: both;
-}
-.main_cont_left{
+
+.main_left{
     width: 68%;
     float: left;
     height: 445px;
     margin-left: 5px;
-    margin-top: 10px;
     border-radius: 10px;
-    background-color: #2F3A4B;
-    
-    
- .takanon_popup{
-    width: 500px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 40px;
-    position: relative;
-    top: -399px;
-    margin: 0 auto;
+    background-color: #2F3A4B ;
 }
-    
 
-
-}
-.main_cont_right{
+.main_right{
     width: 29%;
     float: right;
     height: 445px;
     margin-right: 5px;
-    margin-top: 10px;
     border-radius: 10px;
-    background-color: #2F3A4B;
-
+    background-color: #2F3A4B ;
 }
+
+.main_cont{
+    clear: both;
+    margin-top: 14px;
+}
+
 .middle_div_left, .middle_div_right{
     height: 355px;
-    margin-top: 45px;
+    margin-top: 44px;
     background-color: #161B21;
-
 }
 
-.footer_cont{
-
-}
 .logo{
     float: left;
-    margin:22px;
-    margin-left: 40px;
-
+    margin: 22px;
 }
+
 .banner{
     float: right;
-    margin:18px;
+    margin: 18px;
 }
+
 .tab_button_no_bg, .tab_button_original{
     color: white;
-    width: 92px;
+    width: 79px;
     float: right;
     position: relative;
-    top: -33px;
-    right: 1px;
-    cursor: pointer;
-
-}
-.tab_button_no_bg{
-    background-image: url('./assets/Cleanup Edges.png');
+    top: -25px;
+    top: -30px;
     background-repeat: no-repeat;
-    background-position: 75px 4px;
-    padding-bottom: 12px
 }
+
+.tab_button_no_bg{
+    background-image: url('./assets/Cleanup\ Edges.png');
+    background-position: 62px 4px;
+ 
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
 .tab_button_original{
     background-image: url('./assets/Image.png');
-    background-repeat: no-repeat;
-    background-position: 67px 4px;
-    padding-bottom: 12px;
+    background-position: 55px 4px;
+    padding-bottom: 8px;
+    cursor: pointer;
 }
-.main_cont_left_footer_text {
-    color: white;
-    font-size: 15px;
+
+
+.main_left_footer_text{
+    color: #ffffffb0;
+    font-size: 14px;
     text-align: right;
     direction: rtl;
     margin: 14px;
 }
-.company_policy_btm{
+
+.main_left_footer_btn{
     float: left;
     margin-top: -32px;
-    margin-left: 22px;
-    
-    border-radius: 25px;
-    width: 100px;
-    border: 0;
+    margin-left: 20px;
     background-color: #475366;
+    border: 0;
     color: white;
     height: 26px;
+    border-radius: 25px;
+    width: 102px;
     background-image: url('./assets/eula.png');
     background-repeat: no-repeat;
-    text-align: right;
-    background-position: 5px 6px;
+    background-position: 9px 7px;
+    padding-left: 20px;
 }
+
 .file_input{
-    display: none;
+    display:none;
 }
+
 .takanon_popup{
     width: 500px;
     background-color: white;
@@ -163,6 +162,7 @@ body{
     top: -399px;
     margin: 0 auto;
 }
+
 .takanon_popup_overlay{
     width: 100%;
     height: 100%;
@@ -170,21 +170,25 @@ body{
     position: fixed;
     top: 0;
 }
+
 .close_popup_img{
     position: absolute;
     top: 17px;
     left: 20px;
     cursor: pointer;
 }
+
+
 .download_popup{
     background-color: white;
-    border: solid 1px black;
+    border: 1px solid black;
     width: 500px;
     position: relative;
     margin: 0 auto;
-    top: -400px;
-    height: 200px;
+    top: -376px;
+    height: 207px;
 }
+
 .top_img{
     position: absolute;
     width: 50px;
@@ -196,35 +200,35 @@ body{
     border-radius: 5px;
     box-shadow: 1px 1px 10px #9c27b080;
 }
+
 .download_popup_title{
     position: absolute;
-    top: 18px;
+    top: 34px;
     text-align: center;
     width: 100%;
-    font-size: 44px;
+    font-size: 40px;
     color:#1d2e8d;
 }
+
+
 .download_popup_subtitle{
     position: absolute;
-    top: 80px;
+    top: 85px;
     text-align: center;
     width: 100%;
     font-size: 20px;
     direction: rtl;
     color:#1d2e8d;
 }
-.not_robot_cont{
+
+.not_robot_cont {
     position: absolute;
     top: 126px;
     right: 107px;
     color:#1d2e8d;
-    
+}
 
-}
-.download_popup_checkbox{
-    cursor: pointer;
-}
-.download_popup_cancel{
+.download_popup_cencel{
     position: absolute;
     top: 153px;
     right: 67px;
@@ -234,7 +238,6 @@ body{
     border-radius: 25px;
     background-color: transparent;
     color: black;
-    cursor: pointer;
 }
 
 .download_popup_approve{
@@ -247,28 +250,35 @@ body{
     border-radius: 25px;
     color: white;
     background: linear-gradient(71deg,#9C27B0, #03A9F4);
-    cursor: pointer;
+}
 
-}
-.download_folder_img{
+.DownloadsFolder{
     position: absolute;
-    top: 5px;
-    right: 8px;
+    top: 8px;
+    right: 7px;
 }
-.not_robot_img{
+
+.close_img_popup{
     position: absolute;
-    top: 6px;
-    right: 95px;
+    top: 10px;
+    left: 10px;
 }
-.close1_img{
-    position: absolute;
-    left: 15px;
-    top: 12px;
-    cursor:pointer
+
+.not_robot{
+    position: relative;
+    left: -8px;
 }
+
 .error{
-    color:red;
+    color: red;
     position: absolute;
-    left: 328px;
+    left: 200px;
+    top: 63px;
 }
 
+.displyMsg{
+    position: absolute;
+    left: -105px;
+    top: 0px;
+    color: red;
+}

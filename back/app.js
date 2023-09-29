@@ -7,15 +7,13 @@ app.use(cors());
 var fileupload = require("express-fileupload");
 app.use(fileupload());
 
-
-// making directories public so you can access them from outside
 app.use(express.static('upload_img'));
 app.use(express.static('upload_img_no_bg'));
 app.use(express.static('upload_img_color'));
 
 
 
-//const sent_to_api =  require('./send_to_api');
+const sent_to_api =  require('./send_to_api');
 
 app.post('/upload_img', function (req, res) {
 
@@ -27,42 +25,7 @@ app.post('/upload_img', function (req, res) {
 
       if (err) {
         res.status(500).send(err);
-      } 
-      else {
-       
-        const axios = require('axios');
-        const FormData = require('form-data');
-        const fs = require('fs');
-        const path = require(`path`);
-
-        const inputPath = `${__dirname}/upload_img/${fileName}`;
-        const formData = new FormData();
-        formData.append('size', 'auto');
-        formData.append('image_file', fs.createReadStream(inputPath), path.basename(inputPath));
-
-        axios({
-          method: 'post',
-          url: 'https://api.remove.bg/v1.0/removebg',
-          data: formData,
-          responseType: 'arraybuffer',
-          headers: {
-            ...formData.getHeaders(),
-            'X-Api-Key': 'MvYdenM2jrdiRvPRUJ1EizWJ',
-          },
-          encoding: null
-        })
-        .then((response) => {
-          if(response.status != 200) return console.error('Error:', response.status, response.statusText);
-          (async () => {
-            fs.writeFileSync(`${__dirname}/upload_img_no_bg/no_bg_${fileName}`, response.data);
-          }) ();
-          res.send(fileName)
-         
-        })
-        .catch((error) => {
-            return console.error('Request failed:', error);
-        });
-        /*
+      } else {
           const inputPath = `${__dirname}/upload_img/${fileName}`;
           const fileNameDes=`${__dirname}/upload_img_no_bg/no_bg_${fileName}`;
 
@@ -70,9 +33,7 @@ app.post('/upload_img', function (req, res) {
               await sent_to_api(inputPath , '' , fileNameDes );
               res.send(`${fileName}`);
           }) ();
-          */
-          
-        
+
      
       }
 
@@ -81,4 +42,22 @@ app.post('/upload_img', function (req, res) {
  
 })
 
-app.listen(5000)
+app.post('/upload_image_with_color', function (req, res) {
+
+  let fileName=req.body.UploadedFileName;
+  let color=req.body.color;
+
+  const inputPath = `${__dirname}/upload_img_no_bg/${fileName}`;
+
+  const fileNameDes=`${__dirname}/upload_img_color/color_${fileName}`;
+
+
+  (async () => {
+    await sent_to_api(inputPath , color , fileNameDes );
+    res.send(`${fileName}`);
+  }) ();
+
+
+})
+
+app.listen(5000);

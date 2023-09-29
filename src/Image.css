@@ -10,28 +10,31 @@
     background-repeat: no-repeat;
     background-position: 550px 2px
 }
+
 .color_btn{
-    border: solid 1px white;
+    border: 1px solid #ffffff75;
     color: #ffffff91;
+    width: 89px;
     border-radius: 25px;
-    width: 80px;
     position: relative;
-    top: 15px;
-    left: 15px;
+    top: 17px;
+    left: 19px;
     text-align: right;
-    font-size: 14px;
-    padding-right: 10px;
-    line-height: 25px;
+    padding-right: 11px;
+    line-height: 26px;
 }
+
+
 .input_color{
     position: relative;
     top: -13px;
     left: -227px;
     opacity: 0;
 }
+
 .color_choose{
     color: #ffffff91;
-    width: 24px;
+    width: 28px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -43,21 +46,42 @@
     border-top-left-radius: 13px;
     border-bottom-left-radius: 13px;
 }
+
 .image_pace{
-    border: solid 1px white;
+    border:1px solid white;
     height: 294px;
     position: relative;
-}
+} 
+
+
 .image_only_disp{
     top: 25px;
     position: relative;
     overflow: auto;
     width: 100%;
 }
+
+
 .uploaded_img{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    overflow: auto;
+}
+
+.loader{
+    width: 50%;
+    border: 1px solid #ffffff5c;
+    height: 20px;
+    margin: 0 auto;
+    top: -166px;
+    position: relative;
+}
+
+
+.loader_in{
+    width: 39%;
+    float: left;
+    background: linear-gradient(249deg,#2196F3,#673AB7);
+    color: white;
 }

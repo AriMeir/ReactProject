@@ -1,11 +1,10 @@
-
 import './App.css';
-import Bgremove from './Bgremove';
+import BgRemove from './BgRemove';
 
 function App() {
   return (
     <div className="App">
-     <Bgremove/>
+     <BgRemove/>
     </div>
   );
 }

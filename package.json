@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "maraton3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,8 @@
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "express-fileupload": "^1.4.1",
+    "express-fileupload": "^1.4.0",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",

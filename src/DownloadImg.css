@@ -1,10 +1,3 @@
-@font-face {
-    font-family: "Adumna";
-    src: url('./assets/fonts/Aduma\ Regular.ttf'),
-  }
-body{
-    font-family: 'Aduma';
-}
 .DownloadImg_title{
     color: white;
     text-align: right;
@@ -15,7 +8,6 @@ body{
 .DownloadImg_subtitle{
     color: white;
     text-align: right;
-    direction: rtl;
 }
 
 .DownloadImg_cont{
@@ -43,12 +35,10 @@ body{
     background-image: url('./assets/check.png');
     background-repeat: no-repeat;
     background-position: 195px 2px;
+  
 }
-.title_container{
-    display: flex;
-    width: 100%;
-    justify-content: end;
-}
-.newImg{
-    margin-top: 14px
+
+.newImage{
+    margin-bottom: -11px;
+    margin-right: -9px;
 }
